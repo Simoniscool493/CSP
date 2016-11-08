@@ -8,7 +8,7 @@ int main(int argc,char **argv)
 	char buff[MAXLINE];
 	char cmd[16];
  	char path[64];
-	char path1[64] = ".";
+	
 	char vers[16];
 
 	if(argc!=2)
@@ -29,6 +29,7 @@ int main(int argc,char **argv)
 
 	for( ; ; )
 	{
+		char path1[64] = ".";
 		connfd = Accept(listenfd,(SA *) NULL,NULL);
 
 		while((n=read(connfd,buff,MAXLINE))>0)
